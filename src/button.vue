@@ -4,6 +4,7 @@
       <slot></slot>
     </div>
     <g-icon v-if="icon" :name="icon"></g-icon>
+    <g-icon name="loading" class="loading"></g-icon>
   </button>
 </template>
 <script>
@@ -21,6 +22,17 @@ export default {
 };
 </script>
 <style lang="scss">
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  animation: spin 2s infinite linear;
+}
 @mixin large-text {
   .g-button {
     font-size: var(--font-size);
