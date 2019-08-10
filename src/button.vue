@@ -3,10 +3,7 @@
     <div class="content">
       <slot></slot>
     </div>
-
-    <svg v-if="icon" class="icon">
-      <use :xlink:href="`#i-${icon}`" />
-    </svg>
+    <g-icon v-if="icon" :name="icon"></g-icon>
   </button>
 </template>
 <script>
