@@ -4,7 +4,18 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    let name = this.$el.children;
+    for (let node of name) {
+      if (node.nodeName.toLowerCase() !== "button") {
+        console.warn(
+          `g-button-group 的子元素应该全是 g-button,但你写的是${name}`
+        );
+      }
+    }
+  }
+};
 </script>
 <style lang="scss" scoped>
 .g-button-group {
