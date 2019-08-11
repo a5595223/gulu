@@ -22,6 +22,8 @@ export default {
   display: inline-flex;
   > .g-button {
     border-radius: 0;
+  }
+  > :not(:first-child) {
     margin-left: -1px;
   }
 
