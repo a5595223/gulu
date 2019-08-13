@@ -1,5 +1,7 @@
  轱辘  一个Vue UI 组件 
 
+ [![Build Status](https://www.travis-ci.org/a5595223/gulu.svg?branch=master)](https://www.travis-ci.org/a5595223/gulu)
+
 ## 介绍
 
 ## 开始使用
