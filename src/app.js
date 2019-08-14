@@ -19,91 +19,18 @@ new Vue({
     data: {
         loading1: false,
         loading2: true,
-        loading3: false
+        loading3: false,
+        message: ''
+    },
+    methods: {
+        inputChange(e) {
+            console.log(e.target.value)
+
+        }
     }
 })
 
 
-{
-    const constructor = Vue.extend(Button)
-    const vm = new constructor({
-        propsData: {
-            icon: 'setting'
-        }
-    })
-    vm.$mount()
-    let useElement = vm.$el.querySelector('use')
-    expect(useElement.getAttribute('xlink:href')).to.eq('#i-setting')
-}
-{
-    const constructor = Vue.extend(Button)
-    const vm = new constructor({
-        propsData: {
-            icon: 'setting',
-            loading: true
-        }
 
-    })
-    vm.$mount()
-    let useElement = vm.$el.querySelector('use')
-    expect(useElement.getAttribute('xlink:href')).to.eq('#i-loading')
-}
-{
-    const div = document.createElement(div)
-    document.body.appendChild(div)
-    const constructor = Vue.extend(Button)
-    const vm = new constructor({
-        propsData: {
-            icon: 'setting'
-
-        }
-
-    })
-    vm.$mount(div)
-    let svg = vm.$el.querySelector('svg')
-    expect(getComputedStyle(svg).order).to.eq('1')
-    vm.$el.remove()
-    vm.$destroy()
-}
-{
-    const div = document.createElement('div')
-    document.body.appendChild(div)
-    const constructor = Vue.extend(Button)
-    const vm = new constructor({
-        propsData: {
-            icon: 'setting',
-            iconPosition: 'right'
-
-        }
-
-    })
-    vm.$mount(div)
-    let svg = vm.$el.querySelector('svg')
-    expect(getComputedStyle(svg).order).to.eq('2')
-    vm.$el.remove()
-    vm.$destroy()
-
-}
-{
-    //mock
-
-    const constructor = Vue.extend(Button)
-    const vm = new constructor({
-        propsData: {
-            icon: 'setting'
-
-
-        }
-
-    })
-    //点击按钮函数被触发
-    vm.$mount()
-    let spy = chai.spy(function () { })
-    vm.$on('click', spy)
-    let button = vm.$el
-    button.click()
-    expect(spy).to.have.been.called()
-
-}
 
 
