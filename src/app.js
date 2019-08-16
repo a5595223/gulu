@@ -5,6 +5,8 @@ import ButtonGroup from './g-button-group'
 import chai from 'chai'
 import spies from 'chai-spies'
 import Input from './input'
+import Row from './row'
+import Col from './col'
 
 const expect = chai.expect
 
@@ -12,6 +14,8 @@ Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
+Vue.component('g-row', Row)
+Vue.component('g-col', Col)
 chai.use(spies)
 
 new Vue({
