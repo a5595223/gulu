@@ -33,8 +33,36 @@
 </head>
 
 <body>
+    <style>
+        .demo {
+            background: #ddd;
+            border: 1px solid#666;
+            height: 100px;
+        }
+    </style>
     <div id="app">
+        <g-row>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
+            <g-col span='24' :ipad='{span:12}' :narrow-pc='{span:8}'>
+                <div class="demo"></div>
+            </g-col>
 
+        </g-row>
+        <!-- 
         <div>
             <g-row gutter='20'>
                 <g-col>1</g-col>
@@ -52,9 +80,9 @@
                 <g-col></g-col>
             </g-row>
             <g-row>
-                <g-col :span='24' :ipad='{span:8}' :narrow-pc='{span:4}' :pc='{span:2}' :wide-pc='{span:1}'>1
+                <g-col :span='24' :narrow-pc='{span:4}' :pc='{span:2}' :wide-pc='{span:1}'>1
                 </g-col>
-                <g-col :span='24' :ipad='{span:16}' :narrow-pc='{span:20}' :pc='{span:22}' :wide-pc='{span:23}'>2
+                <g-col :span='24' :narrow-pc='{span:20}' :pc='{span:22}' :wide-pc='{span:23}'>2
                 </g-col>
             </g-row>
             <g-row>
@@ -86,7 +114,7 @@
         <g-input value='卡萨丁' readonly></g-input>
         <g-input v-model='message'></g-input>{{message}}
 
-        <g-input value='爱睡觉' error='姓名不能多于三个字'></g-input>
+        <g-input value='爱睡觉' error='姓名不能多于三个字'></g-input> -->
     </div>
     <script src="./src/app.js"></script>
 
