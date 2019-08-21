@@ -92,7 +92,7 @@ export default {
         createClasses(ipad, "ipad-"),
         createClasses(narrowPc, "narrow-pc-"),
         createClasses(pc, "pc-"),
-        createClasses(widePc, "wide-pc")
+        createClasses(widePc, "wide-pc-")
         // span && `col-${span}`,
         // offset && `offset-${offset}`,
         // ipad && `col-ipad-${ipad.span}`,

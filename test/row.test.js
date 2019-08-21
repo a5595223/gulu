@@ -38,7 +38,7 @@ describe('Row', () => {
 
     })
     it('接收 align 属性', () => {
-        const div = document.createElement(div)
+        const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Row)
         const vm = new Constructor({
