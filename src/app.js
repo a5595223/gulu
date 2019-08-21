@@ -7,6 +7,11 @@ import spies from 'chai-spies'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Header from './header'
+import Sider from './sider'
+import Footer from './footer'
+import Content from './content'
 
 const expect = chai.expect
 
@@ -16,6 +21,11 @@ Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
 Vue.component('g-row', Row)
 Vue.component('g-col', Col)
+Vue.component('g-layout', Layout)
+Vue.component('g-header', Header)
+Vue.component('g-sider', Sider)
+Vue.component('g-footer', Footer)
+Vue.component('g-content', Content)
 chai.use(spies)
 
 new Vue({
