@@ -12,6 +12,8 @@ import Header from './header'
 import Sider from './sider'
 import Footer from './footer'
 import Content from './content'
+import Toast from './toast'
+import plugin from './plugin'
 
 const expect = chai.expect
 
@@ -26,6 +28,8 @@ Vue.component('g-header', Header)
 Vue.component('g-sider', Sider)
 Vue.component('g-footer', Footer)
 Vue.component('g-content', Content)
+Vue.component('g-toast', Toast)
+Vue.use(plugin)
 chai.use(spies)
 
 new Vue({
@@ -36,10 +40,12 @@ new Vue({
         loading3: false,
         message: ''
     },
-    methods: {
-        inputChange(e) {
-            console.log(e.target.value)
+    created() {
 
+    },
+    methods: {
+        showToast() {
+            this.$toast('我是 message')
         }
     }
 })
