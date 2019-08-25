@@ -50,14 +50,15 @@ new Vue({
         showToast3() { this.showToast('bottom') },
         showToast(position) {
             this.$toast('你好', {
-                position: position,
+                position,
                 enableHtml: false,
                 closeButton: {
                     text: '知道啦',
-                    callback(toast) {
+                    callback() {
                         console.log('用户说他知道啦')
                     }
-                }
+                },
+                autoClose: 3,
             })
         }
     }
