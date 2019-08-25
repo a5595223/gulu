@@ -45,9 +45,12 @@ new Vue({
 
     },
     methods: {
-        showToast() {
+        showToast1() { this.showToast('top') },
+        showToast2() { this.showToast('middle') },
+        showToast3() { this.showToast('bottom') },
+        showToast(position) {
             this.$toast('你好', {
-                position: 'bottom',
+                position: position,
                 enableHtml: false,
                 closeButton: {
                     text: '知道啦',
