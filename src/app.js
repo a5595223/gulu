@@ -41,11 +41,20 @@ new Vue({
         message: ''
     },
     created() {
+        this.$toast('你好', {
+            enableHtml: false
+            // closeButton: {
+            //     text: '知道啦',
+            //     callback(toast) {
+            //         console.log('用户说他知道啦')
+            //     }
+            // }
+        })
 
     },
     methods: {
         showToast() {
-            this.$toast('我是 message')
+
         }
     }
 })
