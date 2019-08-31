@@ -1,6 +1,7 @@
 <template>
   <div class="tabs-head">
     <slot></slot>
+    <div class="line" ref="line"></div>
     <div class="actions-wrapper">
       <slot name="actions"></slot>
     </div>
@@ -16,12 +17,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+$blue: blue;
 $tab-height: 40px;
 .tabs-head {
   display: flex;
-  min-height: $tab-height;
   justify-content: flex-start;
   height: $tab-height;
+  position: relative;
+  > .line {
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid $blue;
+    width: 100px;
+  }
   > .actions-wrapper {
     margin-left: auto;
   }
